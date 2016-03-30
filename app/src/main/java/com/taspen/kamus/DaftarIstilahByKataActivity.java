@@ -129,4 +129,10 @@ public class DaftarIstilahByKataActivity extends ListActivity {
             handler.postDelayed(delayAction, DELAY_ACTION);
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        kataDao.close();
+    }
 }

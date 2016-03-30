@@ -69,6 +69,11 @@ public class KataDaoImpl implements KataDao{
         return list;
     }
 
+    @Override
+    public void close() {
+        databaseHelper.close();
+    }
+
     private Kata cursorToKata(Cursor c){
         Kata kata = new Kata();
         kata.setId(c.getString(0));

@@ -26,6 +26,12 @@
             android:label="@string/app_name"/>
         <activity android:name=".KataDetailVersionOneActivity"
             android:label="@string/app_name"/>
+        <activity android:name=".SyaratPengajuanClaimActivity"
+            android:label="@string/app_name"/>
+        <activity android:name=".InformasiActivity"
+            android:label="@string/app_name"/>
+        <activity android:name=".DaftarPersyaratanDetailActivity"
+            android:label="@string/app_name"/>
     </application>
 
 </manifest>

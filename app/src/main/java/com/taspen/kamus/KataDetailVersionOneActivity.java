@@ -46,4 +46,10 @@ public class KataDetailVersionOneActivity extends Activity {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        kataDao.close();
+    }
 }

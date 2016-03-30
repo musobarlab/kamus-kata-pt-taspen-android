@@ -10,4 +10,5 @@ import java.util.List;
 public interface PersyaratanDetailDao {
 
     List<PersyaratanDetail> findByPersyaratan(String idPersyaratan);
+    void close();
 }

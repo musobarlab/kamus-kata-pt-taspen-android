@@ -10,4 +10,6 @@ import java.util.List;
 public interface PersyaratanDao {
 
     List<Persyaratan> findAll();
+    Persyaratan findOne(String id);
+    void close();
 }

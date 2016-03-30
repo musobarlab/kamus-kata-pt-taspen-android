@@ -12,4 +12,5 @@ public interface KataDao {
     Kata findOne(String id);
     List<Kata> findAll();
     List<Kata> findAll(String kata, Integer start, Integer limit);
+    void close();
 }
