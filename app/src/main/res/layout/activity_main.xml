@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/main_cover4"
+    >
+
+    <TextView android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/btn_daftar_kata"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_button"
+        android:text= "@string/btn_daftar_istilah"
+        android:drawableLeft="@drawable/btn_daftar_kata"
+        style="@style/button_text"/>
+    <Button
+        android:id="@+id/btn_informasi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_button"
+        android:text="@string/btn_informasi"
+        android:drawableLeft="@drawable/btn_informasi"
+        style="@style/button_text"/>
+
+</LinearLayout>

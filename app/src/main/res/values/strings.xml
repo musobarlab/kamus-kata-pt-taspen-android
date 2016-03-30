@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="btn_daftar_kata">Istilah dengan abjad</string>
+    <string name="btn_cari_langsung">Cari Istilah</string>
+    <string name="btn_daftar_istilah">Daftar Istilah</string>
+    <string name="btn_informasi">Informasi</string>
+
+    <string name="app_name">Kamus Istilah (Glossary)</string>
+    <string name="title_by_abjad">Istilah Dengan Abjad : </string>
+    <string name="app_name_splash">Kamus Istilah (Glossary) PT TASPEN PERSERO</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_istilah">Istilah/Term :</string>
+    <string name="title_bahasa_indonesia">Penjelasan :</string>
+    <string name="title_bahasa_inggris">Explanation :</string>
+
+    <string name="title_search_istilah">Masukan istilah yang akan dicari :</string>
+    <string name="title_edit_text_istilah">Istilah/Term..</string>
+    <string name="title_btn_search_istilah">Cari..</string>
+
+    <string name="title_btn_pengajuan_klaim">Syarat Pengajuan Klaim</string>
+    <string name="title_text_pengajuan_kalim">Syarat-syarat Pengajuan Klaim</string>
+
+</resources>
