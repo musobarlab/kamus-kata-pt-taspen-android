@@ -22,17 +22,36 @@
         android:layout_gravity="center_horizontal"
         android:textStyle="bold"
         />
-    <EditText
-        android:id="@+id/editTextIstilah"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:hint="@string/title_edit_text_istilah"
-        />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+            <EditText
+                android:id="@+id/editTextIstilah"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:background="@drawable/no_border_edittext"
+                android:hint="@string/title_edit_text_istilah"
+                android:layout_weight="0.97" />
+
+            <ImageView
+                android:id="@+id/image_clear_text_istilah"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_delete"
+                android:contentDescription="@string/app_name"
+            />
+        </LinearLayout>
 
     <ListView
-        android:id="@android:id/list"
+        android:id="@+id/list_istilah"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 

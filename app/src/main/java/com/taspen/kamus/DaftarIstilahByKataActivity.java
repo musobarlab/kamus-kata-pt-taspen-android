@@ -1,5 +1,6 @@
 package com.taspen.kamus;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
@@ -11,11 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
-import android.widget.ListAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import com.taspen.kamus.Model.Kata;
+import com.taspen.kamus.customAdapter.CustomIstilahAdapter;
 import com.taspen.kamus.dao.KataDao;
 import com.taspen.kamus.daoImpl.KataDaoImpl;
 
@@ -27,11 +28,13 @@ import java.util.Map;
 /**
  * Author :)
  */
-public class DaftarIstilahByKataActivity extends ListActivity {
+public class DaftarIstilahByKataActivity extends Activity {
 
     private String istilahForSearch;
     private EditText editTextIstilah;
+    private ImageView imageClearText;
     private ListView listView;
+    private CustomIstilahAdapter customIstilahAdapter;
 
     private KataDao kataDao;
 
@@ -47,7 +50,10 @@ public class DaftarIstilahByKataActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kata_by_istilah);
         editTextIstilah = (EditText) findViewById(R.id.editTextIstilah);
-        listView = getListView();
+        imageClearText = (ImageView) findViewById(R.id.image_clear_text_istilah);
+        imageClearText.setVisibility(View.INVISIBLE);
+
+        listView = (ListView) findViewById(R.id.list_istilah);
 
         listMapIstilah = new ArrayList<>();
         editTextIstilah.addTextChangedListener(new SearchWatcher());
@@ -58,6 +64,7 @@ public class DaftarIstilahByKataActivity extends ListActivity {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                 .inflate(R.layout.load_more, null, false);
         listView.addFooterView(loadMore);
+        loadMore.setVisibility(View.INVISIBLE);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -76,6 +83,16 @@ public class DaftarIstilahByKataActivity extends ListActivity {
                 loadData();
             }
         });
+
+        imageClearText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editTextIstilah.setText("");
+                listMapIstilah.clear();
+                customIstilahAdapter.clear();
+                customIstilahAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     private void loadData(){
@@ -89,8 +106,20 @@ public class DaftarIstilahByKataActivity extends ListActivity {
                 map.put("istilah", k.getIstilah());
                 listMapIstilah.add(map);
             }
-            ListAdapter listAdapter = new SimpleAdapter(DaftarIstilahByKataActivity.this, listMapIstilah,R.layout.list_kata_by_istilah_single,new String[]{"istilah"}, new int[]{R.id.txt_istilah_on_activity_kata_by_istilah});
-            listView.setAdapter(listAdapter);
+
+            customIstilahAdapter = new CustomIstilahAdapter(DaftarIstilahByKataActivity.this, listMapIstilah);
+            listView.setAdapter(customIstilahAdapter);
+
+            if(!editTextIstilah.getText().toString().trim().equals("")) {
+                imageClearText.setVisibility(View.VISIBLE);
+                loadMore.setVisibility(View.VISIBLE);
+            }else{
+                imageClearText.setVisibility(View.INVISIBLE);
+                loadMore.setVisibility(View.INVISIBLE);
+                listMapIstilah.clear();
+                customIstilahAdapter.clear();
+                customIstilahAdapter.notifyDataSetChanged();
+            }
         }catch(Exception e){
             throw new RuntimeException(e);
         }
