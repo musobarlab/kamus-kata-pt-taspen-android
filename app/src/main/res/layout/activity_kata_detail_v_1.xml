@@ -19,6 +19,7 @@
             android:textSize="20sp"
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
+            android:textColor="#ffddff07"
             />
 
         <TextView
@@ -26,8 +27,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="#ff000000"
-            android:background="#ffaefcff"
-            android:textStyle="bold"
+            android:background="#ffddff07"
             android:textSize="18dp"
             />
 
@@ -39,16 +39,14 @@
             android:paddingTop="6dip"
             android:textColor="#ff000000"
             android:background="#fffff3f1"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textSize="18dp" />
 
         <TextView
             android:text="@string/title_bahasa_indonesia"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="#ff000000"
-            android:background="#ffaefcff"
-            android:textStyle="bold"
+            android:background="#ffddff07"
             android:textSize="18dp"
             />
 
@@ -60,16 +58,15 @@
             android:paddingTop="6dip"
             android:textColor="#ff000000"
             android:background="#fffff3f1"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textSize="18dp" />
 
         <TextView
             android:text="@string/title_bahasa_inggris"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="#ff000000"
-            android:background="#ffaefcff"
-            android:textStyle="bold|italic"
+            android:background="#ffddff07"
+            android:textStyle="italic"
             android:textSize="18dp"
             />
 
@@ -82,7 +79,7 @@
             android:textColor="#ff000000"
             android:background="#fffff3f1"
             android:textSize="18dp"
-            android:textStyle="bold|italic" />
+            android:textStyle="italic" />
     </LinearLayout>
 
 </ScrollView>

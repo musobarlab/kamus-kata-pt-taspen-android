@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:padding="5dp"
+    android:background="#fffff3f1"
     >
 
     <TextView
@@ -11,7 +12,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="#ff000000"
-        android:background="#fffff3f1"
         />
 
     <TextView
@@ -21,7 +21,5 @@
         android:paddingLeft="6dip"
         android:paddingTop="6dip"
         android:textColor="#ff000000"
-        android:background="#fffff3f1"
-        android:textSize="18dip"
-        android:textStyle="bold" />
+        android:textSize="18dip" />
 </LinearLayout>
