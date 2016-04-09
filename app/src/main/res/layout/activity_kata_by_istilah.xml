@@ -40,6 +40,8 @@
                 android:singleLine="true"
                 android:background="@drawable/no_border_edittext"
                 android:hint="@string/title_edit_text_istilah"
+                android:textColorHint="#fff8f7ff"
+                android:textColor="#fff8f7ff"
                 android:layout_weight="0.97" />
 
             <ImageView
