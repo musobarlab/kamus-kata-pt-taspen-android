@@ -5,6 +5,17 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.HighlightCopy" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarStyle">@style/Theme.HighlightCopy.ActionBar</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">#ffc5140d</item>
+        <item name="colorControlHighlight">#c5c5c5</item>
+    </style>
+
+    <style name="Theme.HighlightCopy.ActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">#33b5fa</item>
+    </style>
+
     <style name="button_text" >
         <item name="android:layout_width" >fill_parent</item>
         <item name="android:layout_height" >wrap_content</item>

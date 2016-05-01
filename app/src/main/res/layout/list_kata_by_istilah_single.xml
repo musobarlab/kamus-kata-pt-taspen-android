@@ -4,15 +4,8 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:padding="5dp"
-    android:background="#fffff3f1"
+    android:background="#fffffdf4"
     >
-
-    <TextView
-        android:text="@string/title_istilah"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#ff000000"
-        />
 
     <TextView
         android:id="@+id/txt_istilah_on_activity_kata_by_istilah"

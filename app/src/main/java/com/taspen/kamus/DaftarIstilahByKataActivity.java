@@ -55,7 +55,10 @@ public class DaftarIstilahByKataActivity extends Activity {
 
         listView = (ListView) findViewById(R.id.list_istilah);
 
+
+
         listMapIstilah = new ArrayList<>();
+
         editTextIstilah.addTextChangedListener(new SearchWatcher());
 
         kataDao = new KataDaoImpl(DaftarIstilahByKataActivity.this);
@@ -88,11 +91,12 @@ public class DaftarIstilahByKataActivity extends Activity {
             @Override
             public void onClick(View v) {
                 editTextIstilah.setText("");
-                listMapIstilah.clear();
-                customIstilahAdapter.clear();
-                customIstilahAdapter.notifyDataSetChanged();
+                loadAllData();
             }
         });
+
+        //load all data istilah
+        loadAllData();
     }
 
     private void loadData(){
@@ -101,6 +105,9 @@ public class DaftarIstilahByKataActivity extends Activity {
             List<Kata> listKata = kataDao.findAll(istilahForSearch, start, limit);
             for(Kata k:listKata){
                 start++;
+                if(k.getIstilah().trim().equals("")){
+                    continue;
+                }
                 Map<String, String> map = new HashMap<>();
                 map.put("id", k.getId());
                 map.put("istilah", k.getIstilah());
@@ -116,10 +123,31 @@ public class DaftarIstilahByKataActivity extends Activity {
             }else{
                 imageClearText.setVisibility(View.INVISIBLE);
                 loadMore.setVisibility(View.INVISIBLE);
-                listMapIstilah.clear();
-                customIstilahAdapter.clear();
-                customIstilahAdapter.notifyDataSetChanged();
+//                listMapIstilah.clear();
+//                customIstilahAdapter.clear();
+//                customIstilahAdapter.notifyDataSetChanged();
+                loadAllData();
             }
+        }catch(Exception e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void loadAllData(){
+        try{
+            List<Kata> listKata = kataDao.findAll();
+            for(Kata k:listKata){
+                if(k.getIstilah().trim().equals("")){
+                    continue;
+                }
+                Map<String, String> map = new HashMap<>();
+                map.put("id", k.getId());
+                map.put("istilah", k.getIstilah());
+                listMapIstilah.add(map);
+            }
+
+            customIstilahAdapter = new CustomIstilahAdapter(DaftarIstilahByKataActivity.this, listMapIstilah);
+            listView.setAdapter(customIstilahAdapter);
         }catch(Exception e){
             throw new RuntimeException(e);
         }

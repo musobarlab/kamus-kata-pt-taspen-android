@@ -15,4 +15,28 @@
         android:layout_marginBottom="198dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:id="@+id/btn_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fb"
+        android:layout_alignTop="@+id/btn_ig"
+        android:layout_toLeftOf="@+id/btn_ig"
+        android:layout_toStartOf="@+id/btn_ig" />
+    <ImageButton
+        android:id="@+id/btn_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/twetter"
+        android:layout_alignTop="@+id/btn_ig"
+        android:layout_toRightOf="@+id/btn_ig"
+        android:layout_toEndOf="@+id/btn_ig" />
+    <ImageButton
+        android:id="@+id/btn_ig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/instagram"
+        android:layout_alignTop="@+id/textWebsiteTaspen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp" />
 </RelativeLayout>

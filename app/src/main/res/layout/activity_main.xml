@@ -2,22 +2,25 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center_horizontal"
+    android:layout_gravity="center_vertical"
     android:background="@drawable/cover_baru"
     >
 
     <Button
         android:id="@+id/btn_daftar_kata"
-        android:layout_width="fill_parent"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@drawable/my_button"
         android:text= "@string/btn_daftar_istilah"
         android:drawableLeft="@drawable/btn_daftar_kata"
         style="@style/button_text"/>
     <Button
         android:id="@+id/btn_informasi"
-        android:layout_width="fill_parent"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:background="@drawable/my_button"
         android:text="@string/btn_informasi"
         android:drawableLeft="@drawable/btn_informasi"

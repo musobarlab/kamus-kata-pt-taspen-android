@@ -7,14 +7,6 @@
     android:background="@drawable/main_cover_for_list_persyaratan"
     >
 
-    <TextView android:text="@string/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold"
-        />
-
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"

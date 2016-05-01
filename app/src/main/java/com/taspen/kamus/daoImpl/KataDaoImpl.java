@@ -48,7 +48,16 @@ public class KataDaoImpl implements KataDao{
 
     @Override
     public List<Kata> findAll() {
-        return null;
+        List<Kata> list = new ArrayList<>();
+        Cursor c = databaseHelper.getDatabase().query("kata", KOLOM, null,null, null, null, "istilah ASC");
+        c.moveToFirst();
+        while(!c.isAfterLast()){
+            Kata k = cursorToKata(c);
+            list.add(k);
+            c.moveToNext();
+        }
+        c.close();
+        return list;
     }
 
     @Override
