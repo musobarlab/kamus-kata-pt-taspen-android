@@ -11,7 +11,7 @@
         android:layout_height="fill_parent"
         android:gravity="center"
         android:padding="5dp"
-        android:textColor="#fff8f7ff"
+        android:textColor="#ff000000"
         android:text="Loading more data..."/>
 
 </LinearLayout>

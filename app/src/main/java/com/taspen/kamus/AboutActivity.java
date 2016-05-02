@@ -43,7 +43,7 @@ public class AboutActivity extends Activity {
         btnFb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.taspen.com/"));
+                Intent in = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/Taspen.Kita"));
                 startActivity(in);
             }
         });
@@ -52,7 +52,7 @@ public class AboutActivity extends Activity {
         btnTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.taspen.com/"));
+                Intent in = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/taspenkita/"));
                 startActivity(in);
             }
         });
@@ -61,7 +61,7 @@ public class AboutActivity extends Activity {
         btnIg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.taspen.com/"));
+                Intent in = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/taspen.kita/"));
                 startActivity(in);
             }
         });
